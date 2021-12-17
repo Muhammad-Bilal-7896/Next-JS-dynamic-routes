@@ -4,47 +4,47 @@ import Header from "../Components/Header/index";
 
 const sample_array = [
   {
-    id: '301345',
+    id: 0,
     title: "Product 1",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '619326',
+    id: 1,
     title: "Product 2",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '275344',
+    id: 2,
     title: "Product 3",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '435741',
+    id: 3,
     title: "Product 4",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '248390',
+    id: 4,
     title: "Product 5",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '980491',
+    id: 5,
     title: "Product 6",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '537209',
+    id: 6,
     title: "Product 7",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '566281',
+    id: 7,
     title: "Product 8",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   },
   {
-    id: '745233',
+    id: 8,
     title: "Product 9",
     img: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg"
   }
@@ -65,14 +65,14 @@ const Check = () => {
               <Link
                 href="/NewRoute/[...NewRoute]"
                 as={`/NewRoute/${v.id}`}
+                key={i}
               >
-                <div className='border bg-success mt-3' title='Click on me to navigate to the details page' key={i}>
+                <div className='border bg-success mt-3' title='Click on me to navigate to the details page'>
                   <h2>{v.title}</h2>
                   <img title={v.img} width={300} src={v.img} />
                 </div>
               </Link>
             )
-
           })}
         </div>
       </div>
