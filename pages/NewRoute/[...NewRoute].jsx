@@ -54,8 +54,10 @@ const Post = () => {
   const router = useRouter()
   const NewRoute = router.query.NewRoute || []
 
+  const catched_ID = parseInt(NewRoute.join('/'));
+
   useEffect(() => {
-    console.log("New Route is equal to : ", NewRoute.join('/'));
+    console.log("New Route is equal to : ", typeof(NewRoute.join('/')));
   })
 
   return (
@@ -65,8 +67,8 @@ const Post = () => {
       <div className="container">
         <div className="row">
           <div className='border bg-success mt-3' title='Click on me to navigate to the details page'>
-            <h2>{sample_array[0].title}</h2>
-            <img title={sample_array[0].img} width={300} src={sample_array[0].img} />
+            <h2>{sample_array[catched_ID].title}</h2>
+            <img title={sample_array[catched_ID].img} width={300} src={sample_array[catched_ID].img} />
           </div>
         </div>
       </div>
