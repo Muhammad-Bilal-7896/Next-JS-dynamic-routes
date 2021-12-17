@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Header from "../../Components/Header";
+import Header from "../Components/Header/index";
 
 const Check = () => {
     const router = useRouter()
