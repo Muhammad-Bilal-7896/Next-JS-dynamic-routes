@@ -15,6 +15,14 @@ const Header = () => (
             </li>
             <li>
                 <Link
+                    href="/NewRoute/[...NewRoute]"
+                    as="/NewRoute/number1"
+                >
+                    <a>NewRoute Page 1</a>
+                </Link>
+            </li>
+            <li>
+                <Link
                     href="/post/[...slug]"
                     as="/post/check"
                 >
